@@ -1,0 +1,29 @@
+{% extends "core/base.html" %}
+{% load static %}
+{% block contents %}
+<div class="flex flex-col items-center justify-center mt-10">
+
+    <h1 class="text-3xl text-purple-400 bg-purple-200">{{title}}</h1>
+
+    <div class="perspective-distant">
+        <img class="w-50 h-50 rounded-md mt-5 rotate-x-51 rotate-z-43 transform-3d" src="{% static 'img/my.jpeg' %}" alt="sumantris">
+    </div>
+
+    <div class="w-1/3 h-32 rounded-md mt-5 bg-linear-45 from-purple-400  to-green-400"></div>
+
+    <div class="w-1/3 h-32 rounded-md mt-5 bg-linear-45/srgb from-purple-400  to-green-400"></div>
+
+    <div class="w-1/3 h-32 rounded-md mt-5 bg-linear-45/oklch from-purple-400  to-green-400"></div>
+
+    <button popovertarget="my-popover" class="py-3 px-3 mt-10 bg-purple-500 rounded-full text-white hover:bg-cyan-500">Bergabung</button>
+
+    <div popover id="my-popover" class="inset-y-0 my-auto relative transform overflow-hidden mx-auto w-1/4 bg-purple-300 py-5 px-5 rounded-2xl sm:w-full sm:max-w-96 opacity-0 transition-all transition-discrete duration-500 starting:open:opacity-0 open:opacity-100">
+        <h3 class="text-center mb-2 text-purple-950 font-bold">"Gabung Ngoding Yuks"</h3>
+        <p class="text-center text-purple-800">Channel ini sekarang sudah tersedia level "Gabung Ngoding Yuks" dan setelah bergabung teman" akan mendapatkan banyak manfaatnya.</p>
+        <div class="text-center mt-3">
+            <button class="py-2 px-2 bg-purple-500 rounded-md text-white">Join</button>
+        </div>
+    </div>
+
+</div>
+{% endblock contents %}

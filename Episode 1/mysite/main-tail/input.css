@@ -1,0 +1,8 @@
+@import "tailwindcss";
+
+@source "../**/templates/*.html";
+@source "../**/templates/**/*.html";
+
+@theme {
+  --color-purple-400: #6f2abd;
+}
